@@ -13,3 +13,6 @@ class YorumModel(models.Model):
         db_table='yorum'
         verbose_name='Yorum'
         verbose_name_plural='Yorumlar'
+        
+    def __str__(self):
+        return self.yazan.username
