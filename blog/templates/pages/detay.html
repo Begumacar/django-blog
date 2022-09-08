@@ -57,7 +57,15 @@
         </div>
         <div>
             <h5 class="card-title">{{ yorum.yazan.username }}</h5>
-            <p class="card-text">{{ yorum.yorum }}</p>
+            <p class="card-text">
+              {{ yorum.yorum }}
+            </p>
+           
+            {% if request.user == yorum.yazan or request.user == yazi.yazar %}
+              <p>
+                <a class="btn btn-danger" href="{% url 'yorum-sil' id=yorum.id %}">Yorum Sil</a>
+              </p>
+            {% endif %}
         </div>
     </div>
 </div>

@@ -14,8 +14,8 @@ def detay(request, slug):
             yorum.yazan=request.user
             yorum.yazi=yazi
             yorum.save()
-    else:
-        yorum_ekle_form = YorumEkleModelForm()
+ 
+    yorum_ekle_form = YorumEkleModelForm()
         
     return render(request, 'pages/detay.html', context={
         'yazi': yazi,
