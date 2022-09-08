@@ -10,7 +10,12 @@
         <th scope="col">id</th>
         <th scope="col">Başlık</th>
         <th scope="col">Güncellenme Tarihi</th>
-        <th scope="col">Aksiyonlar</th>
+        <th scope="col">
+          <P>
+            <a class="btn btn-primary" href="{% url 'yazi-guncelle' slug=yazi.slug %}">Düzenle</a>
+            <a class="btn btn-danger" href="{% url 'yazi-sil' slug=yazi.slug %}">Sil</a>
+          </P>
+        </th>
       </tr>
     </thead>
     <tbody>
