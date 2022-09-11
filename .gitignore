@@ -3,3 +3,4 @@ dp.sqlite3
 yazi_resimleri
 media
 .env
+prod.sqlite3
