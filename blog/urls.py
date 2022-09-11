@@ -18,4 +18,5 @@ urlpatterns = [
     path('yonlendir', RedirectView.as_view(
         url='https://www.googgle.com'
         ), name='yonlendir'),
+    path('email-gonderildi', TemplateView.as_view(template_name='pages/email-gonderildi.html'), name='email-gonderildi'),
 ] 
