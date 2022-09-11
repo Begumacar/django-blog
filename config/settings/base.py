@@ -124,3 +124,32 @@ LOGIN_REDIRECT_URL = '/'
 #EMAIL_PORT= 587
 #EMAIL_HOST_USER = 'basocial8@gmail.com'
 #EMAIL_HOST_PASSWORD= ???????
+
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'basit_ifade': {
+            'format': '{asctime} {levelname} {message} {name} ',
+            'style': '{'
+        }
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler'
+        },
+        'file': {
+            'class': 'logging.FileHandler',
+            'filename': 'logs/konu_okuma.log',
+            'formatter': 'basit_ifade'
+        }
+    },
+    'loggers':{
+         'konu_okuma': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO'
+        }
+    }    
+}
