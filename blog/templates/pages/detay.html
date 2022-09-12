@@ -52,17 +52,20 @@
 
 {% for yorum in yorumlar %}
 <div class="card">
-    <div class="card-body" style="display:flex;flex-direction: row;">
+    <div class="card-body" style="display:flex; flex-direction: row; width: 900px;
+    margin:auto; ">
         <div>
             {% if yorum.yazan.avatar %}
-                <img src="{{ yorum.yazan.avatar.url }}" class="rounder" class="pt-4"  width="75px" height="75px">
+                <img style="float:left;
+                padding:0 10px 10px 0;" src="{{ yorum.yazan.avatar.url }}" class="rounder" class="pt-4"  width="75px" height="75px">
             {% else %}
-                <img src="{% static 'img/no-avatar.jpg' %} " class="rounder" class="pt-4"  width="75px" height="75px">
+                <img style="float:left;
+                padding:0 10px 10px 0;" src="{% static 'img/avatar.jpg' %} " class="rounder" class="pt-4"  width="75px" height="75px">
             {% endif %}
         </div>
         <div>
-            <h5 class="card-title">{{ yorum.yazan.username }}</h5>
-            <p class="card-text">
+            <h5 class="card-title" >{{ yorum.yazan.username }}</h5>
+            <p class="card-text" >
               {{ yorum.yorum }}
             </p>
            
