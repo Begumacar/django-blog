@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "b258877902d7111ea9fa879af13c3a3a4b292cbe9b22ab1518f8edd4e90f75ce"
+            "sha256": "1de962818740a5fec098c760c82e50726d724e7c5cc4061b2f3edda68bafd1ac"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -23,6 +23,14 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==3.5.2"
+        },
+        "certifi": {
+            "hashes": [
+                "sha256:43dadad18a7f168740e66944e4fa82c6611848ff9056ad910f8f7a3e46ab89e0",
+                "sha256:cffdcd380919da6137f76633531a5817e3a9f268575c128249fb637e4f9e73fb"
+            ],
+            "markers": "python_version >= '3.6'",
+            "version": "==2022.6.15.1"
         },
         "django": {
             "hashes": [
@@ -128,6 +136,14 @@
             "index": "pypi",
             "version": "==9.2.0"
         },
+        "sentry-sdk": {
+            "hashes": [
+                "sha256:7378c08d81da78a4860da7b4900ac51fef38be841d01bc5b7cb249ac51e070c6",
+                "sha256:ef4b4d57631662ff81e15c22bf007f7ce07c47321648c8e601fbd22950ed1a79"
+            ],
+            "index": "pypi",
+            "version": "==1.9.8"
+        },
         "sqlparse": {
             "hashes": [
                 "sha256:0c00730c74263a94e5a9919ade150dfc3b19c574389985446148402998287dae",
@@ -143,6 +159,14 @@
             ],
             "markers": "sys_platform == 'win32'",
             "version": "==2022.2"
+        },
+        "urllib3": {
+            "hashes": [
+                "sha256:3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e",
+                "sha256:b930dd878d5a8afb066a637fbb35144fe7901e3b209d1cd4f524bd0e9deee997"
+            ],
+            "markers": "python_version >= '3.6'",
+            "version": "==1.26.12"
         }
     },
     "develop": {}

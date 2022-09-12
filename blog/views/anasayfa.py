@@ -14,7 +14,7 @@ def anasayfa(request):
         
         
     sayfa =  request.GET.get('sayfa')
-    paginator = Paginator(yazilar, 1)
+    paginator = Paginator(yazilar, 3)
     
     
     
