@@ -2,11 +2,10 @@ from .base import *
 import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
 
-ALLOWED_HOSTS = ['www.begum.com', '127.0.0.1']
+ALLOWED_HOSTS = ['begum.com', '127.0.0.1', '3.95.55.142']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -31,8 +30,12 @@ AUTH_PASSWORD_VALIDATORS = [
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'prod.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': env('DB_NAME'),
+        'USER': env('DB_USER'),
+        'PASSWORD': env('DB_PASSWORD'),
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 

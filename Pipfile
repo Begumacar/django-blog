@@ -12,6 +12,7 @@ django-environ = "*"
 sentry-sdk = "*"
 boto3 = "*"
 django-storages = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 
