@@ -1,8 +1,9 @@
-from .base import *
 import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
+from .base import *
 
-ALLOWED_HOSTS = ['begumacar.com', '127.0.0.1', '18.197.145.174']
+
+ALLOWED_HOSTS = ['begumacar.com', '127.0.0.1', '18.198.22.58']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -41,6 +42,8 @@ DATABASES = {
 
 
 
+
+
 sentry_sdk.init(
     dsn=env('SENTRY_DSN'),
     integrations=[
@@ -62,3 +65,4 @@ STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 DEFAULT_FILE_STORAGE = 'config.storage_backend.MediaStorage'
+
